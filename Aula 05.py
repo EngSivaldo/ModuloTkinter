@@ -3,12 +3,14 @@ import tkinter as tk
 # Cria uma nova janela principal
 janela = tk.Tk()
 
-# Define o título da janela
+# Define o título da janela(tela principal)
 janela.title("Cotação de Moedas")
 
-# Configura a linha 0 da grade para expandir proporcionalmente
+
+# Configura a linha 0 da grade para expandir proporcionalmente com a tela
 janela.rowconfigure(0, weight=1)
-# Configura as colunas 0 e 1 da grade para expandir proporcionalmente
+
+# Configura as colunas 0 e 1 da grade para expandir proporcionalmente com a tela
 janela.columnconfigure([0, 1], weight=1)
 
 # Cria um rótulo com texto, cor de fundo e de texto, largura e altura especificadas
@@ -19,13 +21,14 @@ mensagem = tk.Label(
     width=35, 
     height=5
 )
-# Posiciona o rótulo na linha 0, coluna 0, ocupando duas colunas e expandindo em todas as direções
+# Posiciona o rótulo na/ linha 0,/ coluna 0,/ ocupando duas colunas /expandindo em todas as direções( sticky='nsew')
 mensagem.grid(row=0, column=0, columnspan=2, sticky='nsew')
 
 # Cria um segundo rótulo com texto simples
-mensagem2 = tk.Label(text="Selecione a moeda desejada")
+mensagem2 = tk.Label(text="Selecione a moeda desejada", fg='red', 
+    bg='blue',)
 # Posiciona o segundo rótulo na linha 1, coluna 0
-mensagem2.grid(row=1, column=0)
+mensagem2.grid(row=1, column=0, sticky='nsew')
 
 # Cria uma entrada de texto
 moeda = tk.Entry()
@@ -34,6 +37,13 @@ moeda.grid(row=1, column=1)
 
 # Inicia o loop principal da janela, permitindo que ela responda a eventos
 janela.mainloop()
+
+
+
+
+
+
+
 
 
 # Explicação das mudanças e funções:
