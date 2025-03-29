@@ -35,6 +35,15 @@ moeda = tk.Entry()
 # Posiciona a entrada de texto na linha 1, coluna 1
 moeda.grid(row=1, column=1)
 
+
+def buscar_cotacao():
+    pass
+
+
+botao = tk.Button(text="buscar cotacao", command=buscar_cotacao)
+botao.grid(row=3, column=1)
+
+
 # Inicia o loop principal da janela, permitindo que ela responda a eventos
 janela.mainloop()
 
